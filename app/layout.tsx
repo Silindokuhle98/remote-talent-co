@@ -13,9 +13,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Remote Talent Co. | Hire Exceptional Remote Professionals",
+  title: "Remote Talent Co. | Hire Top Remote Talent for Growing Businesses",
   description:
-    "Remote Talent Co. helps businesses hire appointment setters, customer support representatives, virtual assistants, and other top remote professionals.",
+    "Remote Talent Co. helps businesses hire top remote professionals including appointment setters, virtual assistants, customer support representatives, sales professionals, and administrative staff.",
+
+  keywords: [
+    "Remote Talent",
+    "Remote Staffing",
+    "Virtual Assistants",
+    "Appointment Setters",
+    "Customer Support",
+    "Remote Recruitment",
+    "South Africa",
+    "Remote Employees",
+    "Outsourcing",
+  ],
+
+  authors: [{ name: "Remote Talent Co." }],
+
+  creator: "Remote Talent Co.",
+
+  metadataBase: new URL("https://remotetalentco.co.za"),
+
+  openGraph: {
+    title: "Remote Talent Co.",
+    description:
+      "Hire top remote talent for growing businesses.",
+    url: "https://remotetalentco.co.za",
+    siteName: "Remote Talent Co.",
+    locale: "en_ZA",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Remote Talent Co.",
+    description:
+      "Hire top remote talent for growing businesses.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: "/favicon.ico",
   },

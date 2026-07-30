@@ -1,11 +1,63 @@
+"use client";
+
+import { useState } from "react";
 import { CalendarDays } from "lucide-react";
 
 export default function CallToAction() {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    position: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setSuccess("");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setSuccess("Thank you! We'll get back to you within 24 hours.");
+      setForm({
+        fullName: "",
+        email: "",
+        company: "",
+        position: "",
+        message: "",
+      });
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-[2rem] bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 p-10 shadow-2xl md:p-16">
-
           <div className="mb-12 text-center text-white">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <CalendarDays size={18} />
@@ -21,17 +73,23 @@ export default function CallToAction() {
             </p>
           </div>
 
-          <form className="mx-auto max-w-3xl rounded-3xl bg-white p-8 shadow-xl">
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto max-w-3xl rounded-3xl bg-white p-8 shadow-xl"
+          >
             <div className="grid gap-6 md:grid-cols-2">
-
               <div>
                 <label className="mb-2 block font-medium text-slate-700">
                   Full Name
                 </label>
                 <input
+                  name="fullName"
                   type="text"
+                  value={form.fullName}
+                  onChange={handleChange}
                   placeholder="John Smith"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
+                  required
                 />
               </div>
 
@@ -40,9 +98,13 @@ export default function CallToAction() {
                   Email Address
                 </label>
                 <input
+                  name="email"
                   type="email"
+                  value={form.email}
+                  onChange={handleChange}
                   placeholder="john@company.com"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
+                  required
                 />
               </div>
 
@@ -51,7 +113,10 @@ export default function CallToAction() {
                   Company
                 </label>
                 <input
+                  name="company"
                   type="text"
+                  value={form.company}
+                  onChange={handleChange}
                   placeholder="Company Name"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
                 />
@@ -62,12 +127,14 @@ export default function CallToAction() {
                   Position Needed
                 </label>
                 <input
+                  name="position"
                   type="text"
+                  value={form.position}
+                  onChange={handleChange}
                   placeholder="Appointment Setter"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
                 />
               </div>
-
             </div>
 
             <div className="mt-6">
@@ -76,20 +143,30 @@ export default function CallToAction() {
               </label>
 
               <textarea
+                name="message"
                 rows={5}
+                value={form.message}
+                onChange={handleChange}
                 placeholder="Tell us about the role you're hiring for..."
                 className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
+                required
               />
             </div>
 
             <button
               type="submit"
+              disabled={loading}
               className="mt-8 w-full rounded-2xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
             >
-              Book a Free Consultation
+              {loading ? "Sending..." : "Book a Free Consultation"}
             </button>
-          </form>
 
+            {success && (
+              <p className="mt-6 text-center font-medium text-green-600">
+                {success}
+              </p>
+            )}
+          </form>
         </div>
       </div>
     </section>
