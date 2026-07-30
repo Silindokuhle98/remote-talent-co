@@ -2,19 +2,49 @@
 
 import { useEffect, useState } from "react";
 
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const GA_ID = "G-32703MYDNS";
+
 export default function CookieBanner() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
 
-    if (!consent) {
+    if (consent === "accepted") {
+      loadGoogleAnalytics();
+    } else {
       setShow(true);
     }
   }, []);
 
+  const loadGoogleAnalytics = () => {
+    if (document.getElementById("google-analytics-script")) return;
+
+    const script = document.createElement("script");
+    script.id = "google-analytics-script";
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function (...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  };
+
   const acceptCookies = () => {
     localStorage.setItem("cookie-consent", "accepted");
+    loadGoogleAnalytics();
     setShow(false);
   };
 
