@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,8 +38,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Remote Talent Co.",
-    description:
-      "Hire top remote talent for growing businesses.",
+    description: "Hire top remote talent for growing businesses.",
     url: "https://remotetalentco.co.za",
     siteName: "Remote Talent Co.",
     locale: "en_ZA",
@@ -48,8 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Remote Talent Co.",
-    description:
-      "Hire top remote talent for growing businesses.",
+    description: "Hire top remote talent for growing businesses.",
   },
 
   robots: {
@@ -72,7 +71,24 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-32703MYDNS"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-32703MYDNS');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
