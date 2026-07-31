@@ -35,22 +35,22 @@ export default function Hero() {
 
           <div className="mt-16 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:grid-cols-4">
             <div>
-              <h3 className="text-3xl font-bold">500+</h3>
+              <p className="text-3xl font-bold">500+</p>
               <p className="mt-2 text-slate-300">Candidates Interviewed</p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">48hrs</h3>
+              <p className="text-3xl font-bold">48hrs</p>
               <p className="mt-2 text-slate-300">Average Shortlist</p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">95%</h3>
+              <p className="text-3xl font-bold">95%</p>
               <p className="mt-2 text-slate-300">Client Satisfaction</p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">100%</h3>
+              <p className="text-3xl font-bold">100%</p>
               <p className="mt-2 text-slate-300">Remote</p>
             </div>
           </div>
