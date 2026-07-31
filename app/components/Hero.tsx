@@ -35,22 +35,22 @@ export default function Hero() {
 
           <div className="mt-16 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:grid-cols-4">
             <div>
-              <p className="text-3xl font-bold">500+</p>
+              <h2 className="text-3xl font-bold">500+</h2>
               <p className="mt-2 text-slate-300">Candidates Interviewed</p>
             </div>
 
             <div>
-              <p className="text-3xl font-bold">48hrs</p>
+              <h2 className="text-3xl font-bold">48hrs</h2>
               <p className="mt-2 text-slate-300">Average Shortlist</p>
             </div>
 
             <div>
-              <p className="text-3xl font-bold">95%</p>
+              <h2 className="text-3xl font-bold">95%</h2>
               <p className="mt-2 text-slate-300">Client Satisfaction</p>
             </div>
 
             <div>
-              <p className="text-3xl font-bold">100%</p>
+              <h2 className="text-3xl font-bold">100%</h2>
               <p className="mt-2 text-slate-300">Remote</p>
             </div>
           </div>
@@ -58,14 +58,15 @@ export default function Hero() {
 
         {/* Right Side */}
         <div className="flex items-center justify-center">
-          <Image
-            src="/images/remote-talent-hero.png"
-            alt="Remote Talent Co. Team"
-            width={1536}
-            height={1024}
-            priority
-            className="w-full max-w-none scale-125 rounded-3xl shadow-2xl"
-          />
+        <Image
+  src="/images/remote-talent-hero.webp"
+  alt="Remote Talent Co. Team"
+  width={1536}
+  height={1024}
+  quality={85}
+  priority
+  className="w-full max-w-none scale-125 rounded-3xl shadow-2xl"
+/>
         </div>
       </div>
     </section>
