@@ -1,91 +1,115 @@
-export default function PrivacyPolicyPage() {
-    return (
-      <main className="min-h-screen bg-slate-50 py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl bg-white p-10 shadow-lg">
-          <h1 className="mb-8 text-4xl font-bold text-slate-900">
-            Privacy Policy
-          </h1>
-  
-          <p className="mb-6 text-slate-600">
-            <strong>Effective Date:</strong> July 30, 2026
-          </p>
-  
-          <p className="mb-8 text-slate-700">
-            Remote Talent Co. respects your privacy and is committed to protecting
-            your personal information. This Privacy Policy explains how we
-            collect, use, and safeguard the information you provide when using our
-            website.
-          </p>
-  
-          <section className="mb-8">
-            <h2 className="mb-3 text-2xl font-semibold">
-              Information We Collect
-            </h2>
-            <p className="text-slate-700">
-              When you complete our contact form, we may collect your name, email
-              address, company name, the position you are hiring for, and any
-              information you provide in your message.
-            </p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="mb-3 text-2xl font-semibold">
-              How We Use Your Information
-            </h2>
-            <ul className="list-disc space-y-2 pl-6 text-slate-700">
-              <li>Respond to your enquiries.</li>
-              <li>Provide recruitment and staffing services.</li>
-              <li>Improve our website and customer experience.</li>
-              <li>Communicate with you regarding our services.</li>
-            </ul>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="mb-3 text-2xl font-semibold">
-              Google Analytics
-            </h2>
-            <p className="text-slate-700">
-              We use Google Analytics to understand how visitors use our website.
-              Google Analytics may collect anonymous usage information such as
-              pages visited, device information, and approximate location. This
-              helps us improve our website and services.
-            </p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="mb-3 text-2xl font-semibold">
-              Data Security
-            </h2>
-            <p className="text-slate-700">
-              We take reasonable measures to protect your personal information
-              against unauthorized access, disclosure, or misuse.
-            </p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="mb-3 text-2xl font-semibold">
-              Your Rights
-            </h2>
-            <p className="text-slate-700">
-              You may request access to, correction of, or deletion of your
-              personal information by contacting us.
-            </p>
-          </section>
-  
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold">
-              Contact Us
-            </h2>
-            <p className="text-slate-700">
-              If you have any questions about this Privacy Policy, please contact
-              us at:
-            </p>
-  
-            <p className="mt-4 text-slate-700">
-              <strong>Email:</strong> info@remotetalentco.co.za
-            </p>
-          </section>
-        </div>
+import Script from "next/script";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import TrustedBy from "./components/TrustedBy";
+import RemoteStaffingSolutions from "./components/RemoteStaffingSolutions";
+import Process from "./components/Process";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
+
+export default function Home() {
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Remote Talent Co.",
+      url: "https://remotetalentco.co.za",
+      logo: "https://remotetalentco.co.za/og-image.png",
+      description:
+        "Remote Talent Co. helps businesses hire top remote professionals including appointment setters, virtual assistants, customer support representatives, sales professionals, and administrative staff.",
+      email: "info@remotetalentco.co.za",
+      areaServed: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "Sales",
+        email: "info@remotetalentco.co.za",
+        availableLanguage: "English",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How quickly can we hire remote talent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most clients receive a shortlist of qualified candidates within 48 hours. The exact timeline depends on the role and your requirements.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What roles do you recruit for?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We recruit Appointment Setters, Virtual Assistants, Customer Support Representatives, Sales Professionals, Administrative Assistants, Executive Assistants and many other remote positions.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do candidates work our business hours?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Our candidates are available to work in your preferred time zone, including UK, US, Australian and South African business hours.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does your recruitment process work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We source, screen, interview and assess candidates before presenting only the best matches for your business. You make the final hiring decision.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you provide payroll services?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. We specialise in recruitment and placing exceptional remote talent. We can, however, recommend trusted payroll partners if required.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens if the candidate isn't the right fit?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Our goal is long-term success. If things don't work out during the agreed replacement period, we'll work with you to find a suitable replacement.",
+          },
+        },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+
+      <main className="overflow-x-hidden">
+        <Navbar />
+        <Hero />
+        <TrustedBy />
+        <RemoteStaffingSolutions />
+        <Process />
+        <Testimonials />
+        <FAQ />
+        <CallToAction />
+        <Footer />
       </main>
-    );
-  }
+    </>
+  );
+}
