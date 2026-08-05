@@ -1,115 +1,88 @@
-import Script from "next/script";
+import type { Metadata } from "next";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import TrustedBy from "./components/TrustedBy";
-import RemoteStaffingSolutions from "./components/RemoteStaffingSolutions";
-import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
-import FAQ from "./components/FAQ";
-import CallToAction from "./components/CallToAction";
-import Footer from "./components/Footer";
+export const metadata: Metadata = {
+  title: "Privacy Policy | Remote Talent Co.",
+  description:
+    "Read the Privacy Policy for Remote Talent Co. Learn how we collect, use, and protect your personal information.",
+};
 
-export default function Home() {
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Remote Talent Co.",
-      url: "https://remotetalentco.co.za",
-      logo: "https://remotetalentco.co.za/og-image.png",
-      description:
-        "Remote Talent Co. helps businesses hire top remote professionals including appointment setters, virtual assistants, customer support representatives, sales professionals, and administrative staff.",
-      email: "info@remotetalentco.co.za",
-      areaServed: {
-        "@type": "Place",
-        name: "Worldwide",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "Sales",
-        email: "info@remotetalentco.co.za",
-        availableLanguage: "English",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How quickly can we hire remote talent?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most clients receive a shortlist of qualified candidates within 48 hours. The exact timeline depends on the role and your requirements.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What roles do you recruit for?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We recruit Appointment Setters, Virtual Assistants, Customer Support Representatives, Sales Professionals, Administrative Assistants, Executive Assistants and many other remote positions.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do candidates work our business hours?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Our candidates are available to work in your preferred time zone, including UK, US, Australian and South African business hours.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How does your recruitment process work?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We source, screen, interview and assess candidates before presenting only the best matches for your business. You make the final hiring decision.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you provide payroll services?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. We specialise in recruitment and placing exceptional remote talent. We can, however, recommend trusted payroll partners if required.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What happens if the candidate isn't the right fit?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Our goal is long-term success. If things don't work out during the agreed replacement period, we'll work with you to find a suitable replacement.",
-          },
-        },
-      ],
-    },
-  ];
-
+export default function PrivacyPolicyPage() {
   return (
-    <>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
+    <main className="mx-auto max-w-4xl px-6 py-20">
+      <h1 className="mb-8 text-4xl font-bold text-slate-900">
+        Privacy Policy
+      </h1>
 
-      <main className="overflow-x-hidden">
-        <Navbar />
-        <Hero />
-        <TrustedBy />
-        <RemoteStaffingSolutions />
-        <Process />
-        <Testimonials />
-        <FAQ />
-        <CallToAction />
-        <Footer />
-      </main>
-    </>
+      <p className="mb-6 text-slate-600">
+        Last updated: August 2026
+      </p>
+
+      <div className="prose prose-slate max-w-none">
+        <h2>Introduction</h2>
+
+        <p>
+          Remote Talent Co. respects your privacy and is committed to protecting
+          your personal information. This Privacy Policy explains how we
+          collect, use, disclose and safeguard your information when you visit
+          our website.
+        </p>
+
+        <h2>Information We Collect</h2>
+
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Company information</li>
+          <li>Website usage information</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+
+        <ul>
+          <li>Respond to enquiries</li>
+          <li>Provide recruitment services</li>
+          <li>Improve our website</li>
+          <li>Communicate with you</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2>Cookies</h2>
+
+        <p>
+          Our website uses cookies to improve your browsing experience,
+          understand website traffic and measure marketing performance. You may
+          disable cookies through your browser settings.
+        </p>
+
+        <h2>Third-Party Services</h2>
+
+        <p>
+          We may use trusted third-party services such as Google Analytics and
+          Microsoft Clarity to understand how visitors interact with our
+          website.
+        </p>
+
+        <h2>Data Security</h2>
+
+        <p>
+          We implement appropriate technical and organisational measures to help
+          protect your personal information.
+        </p>
+
+        <h2>Your Rights</h2>
+
+        <p>
+          You may request access, correction or deletion of your personal
+          information by contacting us.
+        </p>
+
+        <h2>Contact Us</h2>
+
+        <p>
+          Email: info@remotetalentco.co.za
+        </p>
+      </div>
+    </main>
   );
 }
