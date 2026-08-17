@@ -3,6 +3,7 @@ import Script from "next/script";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TrustedBy from "./components/TrustedBy";
+import Founder from "./components/Founder";
 import RemoteStaffingSolutions from "./components/RemoteStaffingSolutions";
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
@@ -106,6 +107,8 @@ export default function Home() {
         <Hero />
 
         <TrustedBy />
+
+        <Founder />
 
         <section id="solutions">
           <RemoteStaffingSolutions />
