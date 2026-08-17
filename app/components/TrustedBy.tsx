@@ -38,17 +38,18 @@ export default function TrustedBy() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
-            Trusted by Growing Businesses
+          <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+            Built for Growing Businesses
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Hire with Confidence.
+          <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+            Hire With Confidence.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We help businesses build high-performing remote teams through
-            carefully selected talent, faster hiring, and ongoing support.
+            We help growing businesses build high-performing remote teams
+            through carefully selected talent, faster hiring and ongoing
+            support.
           </p>
         </div>
 

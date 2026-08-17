@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "How quickly can we hire remote talent?",
     answer:
-      "Most clients receive a shortlist of qualified candidates within 48 hours. The exact timeline depends on the role and your hiring requirements.",
+      "We aim to provide a shortlist of qualified candidates within 48 hours. The exact timeline depends on the role and your hiring requirements.",
   },
   {
     question: "What roles do you recruit for?",
@@ -51,7 +51,7 @@ export default function FAQ() {
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Everything You Need To Know
+            Everything You Need to Know
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
