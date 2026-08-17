@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-[#0B1535] text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-6 py-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+        
         {/* Left Side */}
         <div>
           <span className="rounded-full border border-blue-400/30 bg-blue-500/10 px-5 py-2 text-sm font-medium text-blue-300">
@@ -33,32 +34,33 @@ export default function Hero() {
             </button>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur md:grid-cols-4">
+          {/* Launch-stage statistics */}
+          <div className="mt-16 grid grid-cols-2 gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 md:grid-cols-4">
             <div>
-              <h2 className="text-3xl font-bold">500+</h2>
-              <p className="mt-2 text-slate-300">
-                Candidates Interviewed
+              <h2 className="text-2xl font-bold">Pre-Vetted</h2>
+              <p className="mt-2 text-sm text-slate-300">
+                Talent Network
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold">48hrs</h2>
-              <p className="mt-2 text-slate-300">
-                Average Shortlist
+              <h2 className="text-2xl font-bold">Fast Matching</h2>
+              <p className="mt-2 text-sm text-slate-300">
+                Recruitment Process
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold">95%</h2>
-              <p className="mt-2 text-slate-300">
-                Client Satisfaction
+              <h2 className="text-2xl font-bold">Remote-First</h2>
+              <p className="mt-2 text-sm text-slate-300">
+                Talent Solutions
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold">100%</h2>
-              <p className="mt-2 text-slate-300">
-                Remote
+              <h2 className="text-2xl font-bold">Growing</h2>
+              <p className="mt-2 text-sm text-slate-300">
+                Talent Network
               </p>
             </div>
           </div>
@@ -69,7 +71,7 @@ export default function Hero() {
           <Image
             src="/images/remote-talent-hero.webp"
             alt="Remote Talent Co. Team"
-            width={900}
+            width={700}
             height={600}
             quality={75}
             priority
@@ -77,6 +79,7 @@ export default function Hero() {
             className="h-auto w-full max-w-[700px] rounded-3xl shadow-2xl"
           />
         </div>
+
       </div>
     </section>
   );
