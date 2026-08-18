@@ -12,13 +12,9 @@ export default function Founder() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Remote Talent Co. was founded by
-            <span className="font-semibold text-slate-900">
-              {" "}Silindokuhle Poni
-            </span>
-            {" "}with a simple goal: to help growing businesses access reliable
-            remote professionals without making the hiring process unnecessarily
-            complicated.
+            Remote Talent Co. was founded with a simple belief: businesses should
+            be able to access capable remote professionals without having to
+            navigate a complicated hiring process.
           </p>
         </div>
 
@@ -37,11 +33,22 @@ export default function Founder() {
             </p>
 
             <p className="mt-4 leading-7 text-slate-600">
-              Remote Talent Co. is being built around a straightforward
-              principle: connect businesses with carefully selected remote
-              professionals while keeping the hiring experience personal,
-              transparent and focused on the needs of each business.
+              With experience across customer service, remote operations, talent
+              acquisition and candidate sourcing, Silindokuhle brings a practical
+              understanding of both sides of the hiring process — what businesses
+              need from their people and what makes a candidate genuinely suited
+              to a remote role.
             </p>
+
+            <div className="mt-8 border-t border-slate-200 pt-8">
+              <h4 className="text-lg font-bold text-slate-900">Our approach</h4>
+
+              <p className="mt-3 leading-7 text-slate-600">
+                We are intentionally building Remote Talent Co. around quality
+                over volume. Every role starts with understanding the business,
+                the position and the type of person who will succeed in it.
+              </p>
+            </div>
           </div>
         </div>
       </div>
