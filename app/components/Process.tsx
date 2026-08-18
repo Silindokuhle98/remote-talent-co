@@ -9,30 +9,30 @@ const steps = [
   {
     icon: PhoneCall,
     number: "01",
-    title: "Book a Consultation",
+    title: "Tell Us What You Need",
     description:
-      "Tell us about your business, your goals, and the type of remote professional you need.",
+      "Book a consultation and tell us about your business, the role, your requirements, and the type of professional you're looking for.",
   },
   {
     icon: Search,
     number: "02",
-    title: "We Find the Talent",
+    title: "We Source & Screen",
     description:
-      "We source, screen, and interview top remote candidates so you don't have to.",
+      "We source relevant candidates and screen them against the requirements of your role before presenting suitable matches.",
   },
   {
     icon: Users,
     number: "03",
-    title: "Interview Candidates",
+    title: "Meet Your Shortlist",
     description:
-      "Meet the best candidates and choose the one who fits your team perfectly.",
+      "Review the candidates we present, conduct your interviews, and decide who is the right fit for your business.",
   },
   {
     icon: Rocket,
     number: "04",
-    title: "Start Growing",
+    title: "Make Your Hire",
     description:
-      "Your new remote team member starts work while we continue supporting your success.",
+      "Choose your preferred candidate and move forward with your new remote team member based on your agreed hiring arrangements.",
   },
 ];
 
@@ -46,11 +46,12 @@ export default function Process() {
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Hire in 4 Simple Steps
+            A Simple Path to Your Next Hire
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We make hiring remote talent quick, simple, and stress-free.
+            We keep the hiring process straightforward, transparent, and focused
+            on finding the right remote professional for your business.
           </p>
         </div>
 
