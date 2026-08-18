@@ -42,7 +42,7 @@ export default function Home() {
             name: "How quickly can we hire remote talent?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Most clients receive a shortlist of qualified candidates within 48 hours. The exact timeline depends on the role and your requirements.",
+              text: "We aim to present an initial shortlist of qualified candidates within 48 hours, depending on the role and your requirements.",
             },
           },
           {
