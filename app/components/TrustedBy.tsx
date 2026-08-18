@@ -9,51 +9,48 @@ export default function TrustedBy() {
   const features = [
     {
       icon: Zap,
-      title: "Fast Hiring",
+      title: "Faster Hiring",
       description:
-        "Receive qualified candidates in as little as 48 hours.",
+        "We aim to present an initial shortlist of qualified candidates within 48 hours, depending on the role and your requirements.",
     },
     {
       icon: ShieldCheck,
-      title: "Pre-Vetted Talent",
+      title: "Carefully Screened",
       description:
-        "Every professional is carefully screened before being introduced.",
+        "We screen candidates against the requirements of your role before presenting suitable matches.",
     },
     {
       icon: Globe,
-      title: "Global Remote Teams",
+      title: "Remote Talent",
       description:
-        "Access exceptional remote professionals across Africa and beyond.",
+        "Access remote professionals across Africa and beyond, matched to the needs of your business.",
     },
     {
       icon: Handshake,
-      title: "Dedicated Support",
+      title: "Personal Approach",
       description:
-        "We partner with you throughout the hiring journey.",
+        "We keep the hiring process clear and personal, from understanding your requirements to making your hire.",
     },
   ];
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
             Built for Growing Businesses
           </span>
 
           <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-            Hire With Confidence.
+            A Better Way to Hire Remote Talent.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We help growing businesses build high-performing remote teams
-            through carefully selected talent, faster hiring and ongoing
-            support.
+            We keep remote hiring straightforward, transparent and focused on
+            finding the right professional for your business.
           </p>
         </div>
 
-        {/* Feature Cards */}
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature) => {
             const Icon = feature.icon;
