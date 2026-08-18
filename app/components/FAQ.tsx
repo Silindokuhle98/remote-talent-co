@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "How does your recruitment process work?",
     answer:
-      "We source, screen, interview and assess candidates before presenting only the best matches for your business. You make the final hiring decision.",
+      "We source and screen candidates against your requirements before presenting suitable matches for your business. You make the final hiring decision.",
   },
   {
     question: "Do you provide payroll services?",
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What happens if the candidate isn't the right fit?",
     answer:
-      "If things don't work out during the agreed replacement period, we'll work with you to find a suitable replacement.",
+      "If a candidate isn't the right fit, we'll discuss the next steps with you based on the hiring terms agreed for your role.",
   },
 ];
 
@@ -40,10 +40,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section
-      id="faq"
-      className="bg-white py-24"
-    >
+    <section id="faq" className="bg-white py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
@@ -69,9 +66,7 @@ export default function FAQ() {
               <button
                 type="button"
                 aria-expanded={open === index}
-                onClick={() =>
-                  setOpen(open === index ? null : index)
-                }
+                onClick={() => setOpen(open === index ? null : index)}
                 className="flex w-full items-center justify-between px-6 py-5 text-left"
               >
                 <span className="text-lg font-semibold text-slate-900">
@@ -87,9 +82,7 @@ export default function FAQ() {
 
               {open === index && (
                 <div className="border-t border-slate-100 px-6 py-5">
-                  <p className="leading-7 text-slate-600">
-                    {faq.answer}
-                  </p>
+                  <p className="leading-7 text-slate-600">{faq.answer}</p>
                 </div>
               )}
             </div>
