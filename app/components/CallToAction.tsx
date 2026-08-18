@@ -42,7 +42,9 @@ export default function CallToAction() {
       const data = await res.json();
 
       if (data.success) {
-        setSuccess("Thank you! We'll get back to you within 24 hours.");
+        setSuccess(
+          "Thanks for reaching out. We'll review your requirements and get back to you within one business day."
+        );
 
         setForm({
           fullName: "",
@@ -101,16 +103,16 @@ export default function CallToAction() {
             <div className="mb-12 text-center text-white">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <CalendarDays size={18} />
-                Let's Talk
+                Start a Conversation
               </div>
 
               <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-                Ready to Build Your Remote Team?
+                Tell Us Who You&apos;re Looking For.
               </h2>
 
-              <p className="mt-4 text-lg text-blue-100">
-                Fill in the form below and we'll get back to you within 24
-                hours.
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+                Share a few details about your hiring needs. We&apos;ll review your
+                requirements and get back to you within one business day.
               </p>
             </div>
 
@@ -118,6 +120,16 @@ export default function CallToAction() {
               onSubmit={handleSubmit}
               className="mx-auto max-w-3xl rounded-3xl bg-white p-8 shadow-xl"
             >
+              <div className="mb-8 rounded-2xl bg-slate-50 p-5 text-center">
+                <p className="font-semibold text-slate-900">
+                  What happens next?
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  We&apos;ll review your requirements, discuss the role with you,
+                  and explain the next steps before any sourcing begins.
+                </p>
+              </div>
+
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
                   <label className="mb-2 block font-medium text-slate-700">
@@ -131,10 +143,7 @@ export default function CallToAction() {
                     onChange={handleChange}
                     placeholder="John Smith"
                     className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-                    style={{
-                      color: "#0f172a",
-                      WebkitTextFillColor: "#0f172a",
-                    }}
+                    style={{ color: "#0f172a", WebkitTextFillColor: "#0f172a" }}
                     required
                   />
                 </div>
@@ -151,10 +160,7 @@ export default function CallToAction() {
                     onChange={handleChange}
                     placeholder="john@company.com"
                     className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-                    style={{
-                      color: "#0f172a",
-                      WebkitTextFillColor: "#0f172a",
-                    }}
+                    style={{ color: "#0f172a", WebkitTextFillColor: "#0f172a" }}
                     required
                   />
                 </div>
@@ -171,10 +177,7 @@ export default function CallToAction() {
                     onChange={handleChange}
                     placeholder="Company Name"
                     className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-                    style={{
-                      color: "#0f172a",
-                      WebkitTextFillColor: "#0f172a",
-                    }}
+                    style={{ color: "#0f172a", WebkitTextFillColor: "#0f172a" }}
                   />
                 </div>
 
@@ -190,10 +193,7 @@ export default function CallToAction() {
                     onChange={handleChange}
                     placeholder="Appointment Setter"
                     className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-                    style={{
-                      color: "#0f172a",
-                      WebkitTextFillColor: "#0f172a",
-                    }}
+                    style={{ color: "#0f172a", WebkitTextFillColor: "#0f172a" }}
                   />
                 </div>
               </div>
@@ -208,12 +208,9 @@ export default function CallToAction() {
                   rows={5}
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Tell us about the role you're hiring for..."
+                  placeholder="Tell us about the role, your requirements, and what you need help with..."
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-                  style={{
-                    color: "#0f172a",
-                    WebkitTextFillColor: "#0f172a",
-                  }}
+                  style={{ color: "#0f172a", WebkitTextFillColor: "#0f172a" }}
                   required
                 />
               </div>
@@ -223,7 +220,7 @@ export default function CallToAction() {
                 disabled={loading}
                 className="mt-8 w-full rounded-2xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {loading ? "Sending..." : "Book a Free Consultation"}
+                {loading ? "Sending..." : "Request a Consultation"}
               </button>
 
               {success && (
