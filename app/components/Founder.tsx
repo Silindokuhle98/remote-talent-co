@@ -23,9 +23,13 @@ export default function Founder() {
         </div>
 
         <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm md:p-12">
-          <div className="grid gap-8 md:grid-cols-[auto_1fr] md:items-center">
-            <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-blue-100 text-3xl font-bold text-blue-700">
-              SP
+          <div className="grid gap-8 md:grid-cols-[220px_1fr] md:items-center">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              <img
+                src="/founder.jpg"
+                alt="Silindokuhle Poni, Founder of Remote Talent Co."
+                className="h-64 w-full object-cover object-top"
+              />
             </div>
 
             <div>
