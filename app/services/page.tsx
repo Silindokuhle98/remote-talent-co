@@ -1,5 +1,4 @@
 import Process from "../components/Process";
-import Testimonials from "../components/Testimonials";
 
 export default function ServicesPage() {
   return (
@@ -11,46 +10,46 @@ export default function ServicesPage() {
         </p>
 
         <h2 className="mt-4 text-4xl font-bold text-white">
-          Why Businesses Choose Remote Talent Co.
+          A Straightforward Approach to Remote Hiring.
         </h2>
 
         <p className="mx-auto mt-6 max-w-3xl text-slate-300">
-          We don't just send resumes. We carefully source, interview, assess,
-          and match remote professionals that fit your business, culture, and
-          goals.
+          We take the time to understand your role, source suitable remote
+          professionals, and screen candidates against your requirements before
+          introducing potential matches.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left">
             <h3 className="text-2xl font-bold text-white">
-              Pre-Vetted Talent
+              Carefully Screened
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Every candidate goes through interviews, communication testing,
-              and skills assessments before reaching your business.
+              Candidates are reviewed against the requirements of the role
+              before suitable professionals are presented to your business.
             </p>
           </div>
 
           <div className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left">
             <h3 className="text-2xl font-bold text-white">
-              Fast Hiring
+              Faster Matching
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Receive qualified candidates within days instead of spending
-              weeks searching on your own.
+              We aim to make the search more efficient so you can spend less
+              time sorting through applicants on your own.
             </p>
           </div>
 
           <div className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left">
             <h3 className="text-2xl font-bold text-white">
-              Ongoing Support
+              Personal Support
             </h3>
 
             <p className="mt-4 text-slate-300">
-              We stay involved throughout the hiring process to ensure
-              long-term success for both clients and candidates.
+              We keep communication clear throughout the hiring process and
+              help you move from role requirements to a final hiring decision.
             </p>
           </div>
         </div>
@@ -63,16 +62,15 @@ export default function ServicesPage() {
         </p>
 
         <h2 className="mt-4 text-4xl font-bold text-white">
-          Hire Top Remote Talent
+          Remote Talent for Your Business
         </h2>
 
         <p className="mx-auto mt-6 max-w-3xl text-slate-300">
-          We connect businesses with highly skilled remote professionals who
-          help you grow faster while reducing hiring costs.
+          We connect businesses with remote professionals across customer
+          support, sales, administration and other business functions.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* Appointment Setters */}
           <div
             id="appointment-setters"
             className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
@@ -82,12 +80,11 @@ export default function ServicesPage() {
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Qualified professionals who book high-quality meetings with
-              potential clients, keeping your sales calendar full.
+              Remote professionals who help businesses manage outbound
+              outreach, qualify prospects and book meetings.
             </p>
           </div>
 
-          {/* Virtual Assistants */}
           <div
             id="virtual-assistants"
             className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
@@ -97,12 +94,11 @@ export default function ServicesPage() {
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Reliable remote assistants who manage daily operations,
-              scheduling, administration and business support.
+              Remote assistants who can support scheduling, administration,
+              research and day-to-day business tasks.
             </p>
           </div>
 
-          {/* Customer Support */}
           <div
             id="customer-support"
             className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
@@ -112,12 +108,11 @@ export default function ServicesPage() {
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Friendly and professional support specialists who provide
-              exceptional customer service across email, chat and phone.
+              Remote support professionals who can assist customers through
+              email, chat and phone, depending on your requirements.
             </p>
           </div>
 
-          {/* Custom Hiring */}
           <div
             id="custom-hiring"
             className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
@@ -127,8 +122,8 @@ export default function ServicesPage() {
             </h3>
 
             <p className="mt-4 text-slate-300">
-              Need something unique? We'll source remote professionals
-              tailored to your business and specific hiring requirements.
+              Need something different? Tell us about the role and we'll work
+              with you to identify suitable remote talent for your requirements.
             </p>
           </div>
         </div>
@@ -137,23 +132,20 @@ export default function ServicesPage() {
       {/* Our Process */}
       <Process />
 
-      {/* Testimonials */}
-      <Testimonials />
-
       {/* Final Call To Action */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-blue-600 px-8 py-16 text-center shadow-2xl md:px-16">
           <p className="font-semibold uppercase tracking-widest text-blue-100">
-            Ready to Grow?
+            Ready to Hire?
           </p>
 
           <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Build Your Remote Team Today.
+            Tell Us Who You're Looking For.
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-100">
-            Tell us what you need, and we'll help you find the right remote
-            professionals to move your business forward.
+            Share your requirements and we'll review the role with you before
+            the sourcing process begins.
           </p>
 
           <div className="mt-10">
@@ -161,7 +153,7 @@ export default function ServicesPage() {
               href="/#contact"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-lg transition hover:-translate-y-1 hover:bg-slate-100 hover:shadow-xl"
             >
-              Book a Consultation
+              Request a Consultation
             </a>
           </div>
         </div>
